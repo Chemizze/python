@@ -14,7 +14,10 @@ while True:
     if resposta ==1:
         arquivo.lerArquivo(arq)
     elif resposta ==2:
-        print(index.cabeçalho('Opçao 2'))
+        index.cabeçalho('NOVO CADASTRO')
+        nome= str(input('Nome: '))
+        idade=index.leiaInt('Idade: ')
+        arquivo.cadastrar(arq, nome, idade)
     elif resposta==3:
         print('Saindo do sistema...')
         break
